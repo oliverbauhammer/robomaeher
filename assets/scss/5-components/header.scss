@@ -1,0 +1,45 @@
+/* Header */
+
+.header {
+	&__wrapper {
+		border-top: rem(3px) solid $color-brown-dark;
+	}
+
+	&__service {
+		.menu {
+			&-item-wrapper {
+				@include flex();
+				height: rem(42px);
+				margin: 0;
+			}
+
+			&-item > a {
+				@include flex(row,nowrap,center,center);
+				@include font-size(13px);
+				color: $color-white;
+				padding-right: rem(20px);
+
+				.material-icons {
+					padding-right: rem(8px);
+				}
+			}
+		}
+
+		.navigation {
+			&__socialmedia {
+				margin-left: rem(20px);
+
+				.menu {
+					&-item:last-child > a {
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__marquee {
+		@include font-size(15px);
+		height: rem(42px);
+	}
+}

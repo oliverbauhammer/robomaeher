@@ -1,0 +1,50 @@
+/* Search */
+
+.search {
+    @include flex();
+    max-width: rem(44px);
+    position: relative;
+
+    &__show,
+    &__submit {
+        @include flex(row,nowrap,center,center);
+        display: flex !important;
+        height: rem(44px);
+        width: rem(44px);
+    }
+
+    &__form {
+        position: absolute;
+        top: rem(38px);
+    }
+
+    &__controls {
+        @include flex();
+    }
+
+    &__input {
+        margin-right: rem(-44px);
+        padding-right: rem(64px) !important;
+    }
+
+    &__results {
+        margin-top: rem(5px);
+        position: absolute;
+        z-index: 100;
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        @include font-size(16px);
+        background: $color-green-dark;
+        border-radius: rem(3px);
+        color: $color-white;
+        cursor: pointer;
+        font-family: $font-headline-semibold;
+        margin: 0 rem(5px) rem(3px) 0;
+        padding: rem(10px) rem(16px);
+    }
+}

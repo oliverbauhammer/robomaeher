@@ -1,0 +1,30 @@
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "~swiper/css/swiper.css";
+
+@import "1-settings/fonts";
+@import "1-settings/variables";
+
+@import "2-tools/functions";
+@import "2-tools/mixins";
+
+@import "3-generic/generic";
+
+@import "4-elements/buttons";
+@import "4-elements/container";
+@import "4-elements/elements";
+@import "4-elements/forms";
+@import "4-elements/media";
+@import "4-elements/links";
+
+@import "5-components/cards";
+@import "5-components/features";
+@import "5-components/footer";
+@import "5-components/header";
+@import "5-components/navigation";
+@import "5-components/search";
+@import "5-components/swiper";
+
+@import "6-utilities/utilities";
+
+@import "~bootstrap/scss/bootstrap";
+@import "~material-design-icons/iconfont/material-icons.css";

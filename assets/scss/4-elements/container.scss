@@ -1,0 +1,27 @@
+/* Container */
+
+.container {
+    &__spacer {
+        &--small {
+            padding: 2rem 0;
+
+            @include media-breakpoint-down(md){
+                padding: 1rem 0;
+            }
+        }
+        &--normal {
+            padding: 3rem 0;
+
+            @include media-breakpoint-down(md){
+                padding: 1.75rem 0;
+            }
+        }
+        &--large {
+            padding: 5rem 0;
+
+            @include media-breakpoint-down(md){
+                padding: 2.5rem 0;
+            }
+        }            
+    }
+}

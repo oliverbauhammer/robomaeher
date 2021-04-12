@@ -1,0 +1,45 @@
+/* Primary navigation */
+
+.navigation {
+    &__branding {
+        height: rem(120px);
+
+        @include media-breakpoint-down(lg){
+            height: rem(80px);
+        }
+    }
+
+    &__logo {
+        @include media-breakpoint-down(lg){
+            max-width: rem(128px);
+        }
+    }
+
+    &__primary {
+        .menu {
+            &-item-wrapper {
+				@include flex();
+				height: rem(120px);
+				margin: 0;
+
+                @include media-breakpoint-down(lg){
+                    height: rem(80px);
+                }
+			}
+            &-item {
+                @include font-size(18px);
+                font-family: $font-headline-semibold;
+                padding: 0 rem(10px) 0;
+
+                @include media-breakpoint-down(lg){
+                    @include font-size(15px);
+                    padding: 0 rem(8px) 0;
+                }
+            }
+        }
+    }
+
+    &__sub {
+        display: none;
+    }
+}

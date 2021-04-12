@@ -1,0 +1,68 @@
+/* Features */
+
+.features {
+    
+    &__stage {
+        min-height: rem(420px);
+        position: relative;
+    }
+
+    &__background,
+    &__item,
+    &__content {
+        position: absolute;
+    }
+
+    &__background {
+        left: 50%;
+        top: rem(50px);
+        transform: translateX(-50%);
+    }
+
+    &__item {
+        width: 100%;
+    }
+
+    &__content {
+        max-width: 100%;
+        right: 0;
+        top: rem(160px);
+        width: rem(270px);
+    }
+
+    &__title {
+        @include font-size(20px);
+        font-family: $font-headline-semibold;
+        line-height: 1.2;
+    }
+
+    &__description {
+        @include font-size(14px);
+    }
+
+    &__open,
+    &__close {
+        @include flex(row,nowrap,center,center);
+        background-color: $color-brown-dark;
+        border: rem(2px) solid $color-white;
+        border-radius: 50%;
+        box-shadow: 0 0 rem(15px) 0 $color-grey;
+        cursor: pointer;
+        height: rem(42px);
+        position: absolute;
+        width: rem(42px);
+
+        @include media-breakpoint-down(md){
+            display: none !important;
+        }
+
+        .material-icons {
+            color: $color-white;
+        }
+    }
+    &__close {
+        left: rem(-52px);
+        transform: rotate(45deg);
+        top: rem(-8px);
+    }
+}

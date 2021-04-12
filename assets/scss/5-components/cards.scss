@@ -1,0 +1,123 @@
+/* Cards */
+
+.cards {
+
+    &__card {
+        background-color: $color-white;
+        padding: rem(20px) 0 0 rem(20px);
+        position: relative;
+        transition: box-shadow .2s;
+
+        @include media-breakpoint-up(md){
+            border-left: rem(1px) solid $color-grey;
+        }
+
+        &:hover {
+            box-shadow: 0 0 rem(15px) 0 $color-grey;
+            position: relative;
+            z-index: 100;
+        }
+    }
+
+    &__title {
+        @include font-size(18px);
+        font-family: $font-headline-semibold;
+        margin-bottom: 0;
+    }
+
+    &__description,
+    &__button {
+        @include font-size(13px);
+    }
+
+    &__button {
+        @include flex();
+        color: $color-green-dark;
+        font-family: $font-headline-semibold;
+
+        .material-icons {
+            @include flex(row,nowrap,center,center);
+            background-color: $color-green-dark;
+            border-radius: 3px;
+            color: $color-white;
+        }
+    }
+
+    /* Specific card settings */
+
+    &__card {
+        &--link-card {
+            @include media-breakpoint-up(lg){
+                margin-right: rem(-30px);
+                min-height: rem(135px);
+                padding-right: rem(20px);
+            }
+
+            .cards__link {
+                @include flex(row,nowrap,space-between,flex-start);
+            }
+
+            &:not(:last-child){
+                border-bottom: rem(1px) solid $color-grey;
+            }
+
+            .cards__button {
+                margin-left: rem(10px);
+                margin-top: rem(6px);
+
+                .material-icons {
+                    @include font-size(32px);
+                    height: rem(42px) !important;
+                    width: rem(42px) !important;
+                }
+            }
+        }
+        &--product-card {
+            min-height: rem(270px);
+            padding: rem(20px) 0 0 rem(20px);
+
+            @include media-breakpoint-up(md){
+                &:nth-child(-n+4){
+                    border-bottom: rem(1px) solid $color-grey;
+                }
+
+                &:nth-child(4n+4){
+                    border-right: rem(1px) solid $color-grey;
+                }
+            }
+
+            @include media-breakpoint-down(md){
+                border-bottom: rem(1px) solid $color-grey;
+            }
+
+            .cards__title,
+            .cards__description,
+            .cards__button {
+                position: relative;
+                z-index: 100;
+            }
+
+            .cards__image {
+                max-width: calc(100% - 3rem);
+                position: absolute;
+                top: rem(60px);
+                z-index: 0;
+
+                @include media-breakpoint-down(sm){
+                    top: rem(8px);
+                }
+            }
+            .cards__button {
+                bottom: rem(10px);
+                position: absolute;
+
+                .material-icons {
+                    @include font-size(12px);
+                    height: rem(14px) !important;
+                    margin-right: rem(6px);
+                    width: rem(14px) !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+body,
+html {
+  background-color: $color-white;
+  color: $color-brown-dark !important;
+  font-family: $font-regular;
+  margin: 0;
+	padding: 0;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: $font-headline-bold;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+strong,
+b {
+  font-family: $font-bold;
+  font-weight: 400 !important;
+}
